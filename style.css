@@ -95,9 +95,7 @@ section {
     animation-delay: 2s, 3s;
 }
 
-.home-img {
-    animation: floatImage 4s ease-in-out infinite;
-}
+
 
 .home-content {
     max-width: 600px;
@@ -286,6 +284,7 @@ span {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     gap: 2.5rem;
+    margin-top: 5rem;
 }
 
 
@@ -306,29 +305,45 @@ span {
     transform: scale(1.1);
 }
 
-.portifolio-box .portifolio-layer {
+.portifolio-box  {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
+    background: linear-gradient(rgba(0, 0, 0, .1) );
+    background: var(--bg-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-top: -300px;
     flex-direction: column;
     text-align: center;
     padding: 0 4rem;
     transform: translateY(100%);
     transition: .5s ease;
 }
+.portifolio-layer { 
+    margin: 300;
+    margin-top: -200px;
+    border: #323946;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+   
+
+}
+
 
 .portifolio-box:hover .portifolio-layer {
     transform: translateY(0%);
 }
 
 .portifolio-layer h4 { 
-    font-size: 3rem; 
+    
+    margin: 3px;
+    font-size: 1.3rem; 
+    color: #0ef
 }
 
 .portifolio-layer p {
@@ -352,6 +367,8 @@ span {
 }
 
 .contact h2 {
+    text-align: center;
+    align-items: center;
     margin-bottom:  3rem;
 }
 
@@ -497,10 +514,7 @@ span {
     .home-content h1 {
         font-size: 5rem;
     }
-    .home-img img {
-        width: 70vw;
-        margin-top: 4rem;
-    }
+    
     .about {
         flex-direction: column-reverse;
     }
@@ -512,8 +526,8 @@ span {
         margin-bottom: 3rem;
     }
 
-    .portifolio h2 {
-        margin-bottom: 3rem; 
+    .portifolio h2 {   
+        margin-bottom: 6rem; 
     }
     .portifolio-container {
         grid-template-columns: repeat(2, 1fr);
@@ -634,5 +648,88 @@ span {
     100% {
         transform: translateY(0);
     }
+}
+
+
+
+.home-img img {
+    width: 300px; /* Ajuste o tamanho conforme necessário */
+
+    height: auto;
+    animation: floatImage 4s ease-in-out infinite;
+}
+.home-content {
+    margin-right: 60px;
+    background: linear-gradient(-120deg, var(--bg-color), var(--second--bg-color));
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajustando a margem da seção portfólio para subir mais próximo ao título */
+.portifolio-container {
+    margin-top: -655px; /* Ajuste conforme necessário */
+}
+
+/* Ajustando os boxes do portfólio */
+.portifolio-box {
+    margin-top: 0px;  /* Ajuste conforme necessário */
+    padding: 0px; /* Controle o espaçamento interno se necessário */
+}
+
+/* Subir a camada sobre o portfólio */
+.portifolio-layer {
+    margin-top: 0px;  /* Ajuste a margem para um posicionamento mais próximo */
+    padding-top: 0px; /* Altere o padding conforme necessário */
+}
+
+.portifolio-layer h4 {
+    padding: -0px;
+    margin-top: -15px; /* Ajuste conforme necessário */
+    
+}
+
+
+/* teste */ 
+
+.portifolio-box {
+    margin-top: 100px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.portifolio-box img {
+    width: 100%;
+    display: block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.portifolio-box:hover img {
+    transform: scale(1.1);
+}
+
+.portifolio-layer {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px; /* Adiciona um espaçamento interno */
+    text-align: center;
+    transition: 0.5s;
+    margin-top: -110px;
+}
+
+.portifolio-layer h4 {
+    margin-bottom: 10px; /* Espaço entre o título e o texto */
+    font-size: 1.8rem;
+}
+
+.portifolio-layer p {
+    font-size: 1.4rem;
+    line-height: 1.6; /* Melhora a legibilidade do texto */
+    margin-top: 10px; /* Espaço extra entre a imagem e o texto */
 }
 
