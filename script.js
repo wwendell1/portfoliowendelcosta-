@@ -27,17 +27,17 @@ window.onscroll = () => {
         };
      }); 
 
-     /*======================= stick nav bar ================*/
+     /*stick da nav bar */
      let header = document.querySelector('header');
 
      header.classList.toggle('sticky', window,scrollY > 100);
 
-     /*=================== remove toggle icon e navbar em click navbar link ================*/
+     /*retirando o click do togle*/
      menuIcon.classList.remove('bx-x');
      navbar.classList.remove('active');
 };
 
-/*=================== Scroll reveal  ================*/
+/*revelando scroll */
 ScrollReveal({ 
     //reset: true,
     distance: '80px',
@@ -50,10 +50,10 @@ ScrollReveal().reveal('.home-img, .skills-container, .portifolio-box, .contact f
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left'});
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right'});
 
-/*=================== js typed================*/
+/*tipagem do js */
 
 const typed = new Typed('.multiple-text',  {
-    strings: ['Estudante de Análise e Desenvolvimento de Sistemas','e', 'Frontend'],
+    strings: ['Desenvolvedor FullStack ','e', 'Analista de Sistemas'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
